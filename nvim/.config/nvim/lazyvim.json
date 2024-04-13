@@ -1,26 +1,19 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.coding.native_snippets",
     "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
     "lazyvim.plugins.extras.editor.leap",
-    "lazyvim.plugins.extras.editor.mini-files",
-    "lazyvim.plugins.extras.editor.navic",
-    "lazyvim.plugins.extras.formatting.black",
-    "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.python",
-    "lazyvim.plugins.extras.lang.python-semshi",
-    "lazyvim.plugins.extras.lang.rust",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.lazyrc",
     "lazyvim.plugins.extras.linting.eslint",
-    "plugins.extras.lang.templ",
-    "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.editor.outline"
+    "plugins.extras.lang.templ"
   ],
   "news": {
     "NEWS.md": "3314"
