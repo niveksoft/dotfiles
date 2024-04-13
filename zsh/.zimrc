@@ -9,5 +9,6 @@ zmodule magic-enter
 zmodule termtitle
 zmodule utility
 zmodule fzf
+zmodule asdf
 zmodule joke/zim-starship
 zmodule joke/zim-github-cli
