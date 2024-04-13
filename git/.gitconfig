@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = nikevsoft
+	email = 26445418+nikevsoft@users.noreply.github.com
+[core]
+	editor = helix
