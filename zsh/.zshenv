@@ -4,5 +4,5 @@ export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 export DOTFILES="$HOME/Development/dotfiles"
 
-export VISUAL="helix"
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
