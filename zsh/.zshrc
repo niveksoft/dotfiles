@@ -14,4 +14,10 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 
+# TODO: add this to a module
+fzf_bindings="/usr/share/fzf/key-bindings.zsh"
+if [ -f "$fzf_bindings" ]; then
+  source "$fzf_bindings"
+fi
+
 source ${ZIM_HOME}/init.zsh
