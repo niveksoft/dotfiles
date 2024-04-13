@@ -1,6 +1,13 @@
-zmodule joke/zim-starship
-zmodule environment
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
+zmodule environment
+zmodule input
+zmodule run-help
+zmodule magic-enter
+zmodule termtitle
+zmodule utility
+zmodule fzf
+zmodule joke/zim-starship
+zmodule joke/zim-github-cli
