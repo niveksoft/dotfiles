@@ -6,6 +6,7 @@ zmodule termtitle
 zmodule utility
 zmodule fzf
 zmodule asdf
+zmodule archive
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule zsh-users/zsh-syntax-highlighting
