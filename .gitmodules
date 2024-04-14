@@ -1,0 +1,3 @@
+[submodule "fonts/ttf-monolisa"]
+	path = fonts/ttf-monolisa
+	url = git@github.com:nikevsoft/ttf-monolisa.git
