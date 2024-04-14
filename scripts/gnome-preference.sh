@@ -6,6 +6,11 @@
 # Each command executed is printed to the console to trace the execution.
 set -ex
 
+### Applications ###
+
+dconf write /org/gnome/applications/terminal/exec "'wezterm'"
+dconf write /org/gnome/applications/terminal/exec-arg "''"
+
 ### Sound ###
 
 # Sounds
