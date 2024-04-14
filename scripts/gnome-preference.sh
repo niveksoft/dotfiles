@@ -40,6 +40,11 @@ dconf write /org/gnome/desktop/background/primary-color "'#e18477'"
 dconf write /org/gnome/desktop/screensaver/picture-uri "'file:///usr/share/backgrounds/gnome/neogeo-l.jxl'"
 dconf write /org/gnome/desktop/screensaver/primary-color "'#e18477'"
 
+# Fonts
+dconf write /org/gnome/desktop/interface/font-name "'Noto Sans 11'"
+dconf write /org/gnome/desktop/interface/document-font-name "'Noto Sans 11'"
+dconf write /org/gnome/desktop/interface/monospace-font-name "'MonoLisa Variable 10'"
+
 ### Keyboard ###
 
 # Shortcuts
