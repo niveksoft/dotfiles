@@ -6,3 +6,5 @@ export DOTFILES="$HOME/Development/dotfiles"
 
 export VISUAL="helix"
 export EDITOR="$VISUAL"
+
+export TERMINAL="wezterm"
