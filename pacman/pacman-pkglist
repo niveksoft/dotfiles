@@ -4,13 +4,16 @@ base
 base-devel
 bitwarden
 btrfs-progs
+chromium
 cups
 cups-browsed
 cups-pdf
 dconf-editor
 dkms
+docker
 efibootmgr
 evince
+file-roller
 firefox
 firewalld
 foomatic-db
