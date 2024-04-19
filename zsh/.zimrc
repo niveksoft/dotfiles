@@ -13,3 +13,4 @@ zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
 zmodule joke/zim-starship
 zmodule joke/zim-github-cli
+zmodule jeffreytse/zsh-vi-mode
