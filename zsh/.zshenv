@@ -8,3 +8,5 @@ export VISUAL="helix"
 export EDITOR="$VISUAL"
 
 export TERMINAL="wezterm"
+
+export BROWSER="firefox"
