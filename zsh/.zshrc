@@ -14,6 +14,9 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 
+# Fixes issue with fzf bindings getting overriden by vi-mode
+ZVM_INIT_MODE=sourcing
+
 # TODO: add this to a module
 fzf_bindings="/usr/share/fzf/key-bindings.zsh"
 if [ -f "$fzf_bindings" ]; then
