@@ -1,3 +1,4 @@
+
 # Install modules without git
 # zstyle ':zim:zmodule' use 'degit'
 
@@ -15,12 +16,11 @@ if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
 fi
 
 # Fixes issue with fzf bindings getting overriden by vi-mode
-ZVM_INIT_MODE=sourcing
-
-# TODO: add this to a module
-fzf_bindings="/usr/share/fzf/key-bindings.zsh"
-if [ -f "$fzf_bindings" ]; then
-  source "$fzf_bindings"
-fi
+function zvm_after_init() {
+  fzf_bindings="/usr/share/fzf/key-bindings.zsh"
+  if [ -f "$fzf_bindings" ]; then
+    source "$fzf_bindings"
+  fi
+}
 
 source ${ZIM_HOME}/init.zsh
