@@ -101,8 +101,8 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-group "@as []"
 dconf write /org/gnome/desktop/wm/keybindings/switch-group-backward "@as []"
 
 ## Screenshots
-dconf write /org/gnome/shell/keybindings/show-screenshot-ui "@as ['<Shift><Super>4']"
-dconf write /org/gnome/shell/keybindings/show-screen-recording-ui "@as ['<Shift><Super>5']"
+dconf write /org/gnome/shell/keybindings/show-screenshot-ui "@as ['<Shift><Super>5']"
+dconf write /org/gnome/shell/keybindings/show-screen-recording-ui "@as ['<Shift><Super>6']"
 
 ## System
 dconf write /org/gnome/settings-daemon/plugins/media-keys/screensaver "@as []"
