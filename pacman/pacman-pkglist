@@ -11,6 +11,7 @@ cups-pdf
 dconf-editor
 dkms
 docker
+docker-compose
 efibootmgr
 evince
 file-roller
@@ -84,6 +85,7 @@ network-manager-applet
 networkmanager
 noto-fonts
 nss-mdns
+ntfs-3g
 nvidia-dkms
 nvidia-settings
 orca
@@ -107,6 +109,7 @@ tecla
 tmux
 totem
 tracker3-miners
+trash-cli
 ttf-jetbrains-mono
 ttf-nerd-fonts-symbols
 wget
