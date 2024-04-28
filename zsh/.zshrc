@@ -1,4 +1,3 @@
-
 # Install modules without git
 # zstyle ':zim:zmodule' use 'degit'
 
