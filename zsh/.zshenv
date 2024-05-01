@@ -7,6 +7,6 @@ export DOTFILES="$HOME/Development/dotfiles"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
-export TERMINAL="wezterm"
+export TERM="wezterm"
 
 export BROWSER="firefox"
