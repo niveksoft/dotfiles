@@ -12,7 +12,7 @@ vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
 
 -- Use vim-sleuth for indents and widths
-vim.opt.expandtab = false -- use spaces instead of tabs
+vim.opt.expandtab = false -- false to use tabs instead of spaces
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
@@ -45,7 +45,7 @@ vim.opt.splitbelow = true
 -- Configure how whitespace characters are displayed
 -- See `:help 'list'`
 -- See `:help 'listchars'`
-vim.opt.list = false
+vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Minimum number of screen lines to keep above and below the cursor.
