@@ -1,31 +1,19 @@
 return {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      transparent_background = true,
-      custom_highlights = function(colors)
-        return {
-          CursorLine = { bg = colors.none },
-          CursorLineNr = { bg = colors.none },
-          FloatShadow = { bg = colors.none },
-          FloatShadowThrough = { bg = colors.none },
-          NormalFloat = { bg = colors.none },
-        }
-      end,
-      integrations = {
-        navic = {
-          enable = true,
-          custom_bg = "NONE", -- remove the lazyvim custom bg in transparent_background
+    { "catppuccin/nvim" },
+    {
+        "scottmckendry/cyberdream.nvim",
+        opts = {
+            transparent = true,
+            italic_comments = true,
+            borderless_telescope = false,
+            terminal_colors = true,
         },
-      },
     },
-  },
 
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin-frappe",
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "catppuccin-frappe",
+        },
     },
-  },
 }
