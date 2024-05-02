@@ -12,16 +12,14 @@ return {
         "neovim/nvim-lspconfig",
         opts = {
             servers = {
-                -- Ensure mason installs the server
                 templ = {
-                    mason = true,
                     settings = {
                         vim.filetype.add { extension = { templ = "templ" } },
                     },
                 },
 
                 html = {
-                    filetypes = { "html", "templ" },
+                    filetypes_include = { "templ" },
                 },
             },
         },
@@ -31,7 +29,7 @@ return {
         "stevearc/conform.nvim",
         opts = {
             formatters_by_ft = {
-                templ = { "templ" },
+                ["templ"] = { "templ" },
             },
         },
     },

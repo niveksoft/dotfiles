@@ -1,3 +1,4 @@
 return {
-    { "tpope/vim-sleuth", event = { "VeryLazy" } },
+    { "tpope/vim-sleuth" },
+    { "mrjones2014/smart-splits.nvim" },
 }

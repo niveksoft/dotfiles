@@ -1,8 +1,9 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.native_snippets",
-    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lazyrc",
     "plugins.extras.lang.templ"
   ],
