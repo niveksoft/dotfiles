@@ -122,6 +122,9 @@ xdg-utils
 xorg-xinit
 xsel
 yelp
+zathura
+zathura-cb
+zathura-pdf-mupdf
 zip
 zram-generator
 zsh
