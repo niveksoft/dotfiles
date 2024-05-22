@@ -1,19 +1,12 @@
 return {
+    { "rose-pine/neovim", name = "rose-pine" },
     { "catppuccin/nvim" },
-    {
-        "scottmckendry/cyberdream.nvim",
-        opts = {
-            transparent = true,
-            italic_comments = true,
-            borderless_telescope = false,
-            terminal_colors = true,
-        },
-    },
+    { "scottmckendry/cyberdream.nvim" },
 
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "catppuccin-frappe",
+            colorscheme = "cyberdream",
         },
     },
 }
