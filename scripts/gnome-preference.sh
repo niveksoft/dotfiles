@@ -128,8 +128,9 @@ dconf write /org/gnome/shell/enabled-extensions "@as ['system-monitor@gnome-shel
 
 # Pop Shell
 dconf write /org/gnome/shell/extensions/pop-shell/tile-by-default true
+dconf write /org/gnome/shell/extensions/pop-shell/show-title true
 dconf write /org/gnome/shell/extensions/pop-shell/activate-hint true
-dconf write /org/gnome/shell/extensions/pop-shell/activate-hint-border-radius 5
+dconf write /org/gnome/shell/extensions/pop-shell/activate-hint-border-radius 2
 dconf write /org/gnome/shell/extensions/pop-shell/fullscreen-launcher true
 dconf write /org/gnome/shell/extensions/pop-shell/hint-color-rgba "'rgb(124, 189, 232)'"
 dconf write /org/gnome/shell/extensions/pop-shell/gap-outer "uint32 3"
