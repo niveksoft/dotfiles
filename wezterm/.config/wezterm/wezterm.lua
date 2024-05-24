@@ -10,7 +10,8 @@ config.font_size = 14.0
 config.scrollback_lines = 10000
 
 -- Theme
-config.color_scheme = "Catppuccin Frappe"
+-- config.color_scheme = "Catppuccin Frappe"
+config.colors = require("cyberdream")
 config.window_decorations = "RESIZE"
 
 -- Tabs
