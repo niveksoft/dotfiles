@@ -110,7 +110,6 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/logout "@as []"
 
 ## Windows
 dconf write /org/gnome/desktop/wm/keybindings/close "@as ['<Super>q']"
-dconf write /org/gnome/desktop/wm/keybindings/close "@as ['<Super>q']"
 dconf write /org/gnome/desktop/wm/keybindings/begin-move "@as []"
 dconf write /org/gnome/desktop/wm/keybindings/begin-resize "@as []"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-left "@as []"
