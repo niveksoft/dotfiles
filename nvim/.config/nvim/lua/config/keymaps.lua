@@ -8,10 +8,10 @@ local util = require "lazyvim.util"
 -- stylua: ignore
 vim.keymap.set("n", "<leader>gd", function() util.terminal({ "lazydocker" }, { esc_esc = false, ctrl_hjkl = false }) end, { desc = "Lazydocker" })
 
-vim.keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close Current Tab" })
-vim.keymap.set("n", "<leader>to", "<cmd>tabonly<CR>", { desc = "Close Other Tabs" })
-vim.keymap.set("n", "<S-l>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
-vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<CR>", { desc = "Prev Tab" })
+-- vim.keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close Current Tab" })
+-- vim.keymap.set("n", "<leader>to", "<cmd>tabonly<CR>", { desc = "Close Other Tabs" })
+-- vim.keymap.set("n", "<S-l>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
+-- vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<CR>", { desc = "Prev Tab" })
 
 -- Setting the keymaps here instead of in the plugin spec as its getting overriden
 local splits = require "smart-splits"
