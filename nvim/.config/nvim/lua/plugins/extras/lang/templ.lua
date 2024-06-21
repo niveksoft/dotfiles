@@ -21,6 +21,10 @@ return {
                 html = {
                     filetypes_include = { "templ" },
                 },
+
+                tailwindcss = {
+                    filetypes_include = { "templ" },
+                },
             },
         },
     },
