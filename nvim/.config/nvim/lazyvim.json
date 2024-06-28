@@ -26,6 +26,7 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "plugins.extras.lang.templ"
+    "plugins.extras.editor.oil",
   ],
   "news": {
     "NEWS.md": "6077"
