@@ -1,27 +1,28 @@
 return {
     "mrjones2014/smart-splits.nvim",
     lazy = false,
-    config = function()
-        -- Setting the keymaps here instead of in the plugin spec as its getting overriden
+    keys = function()
         local splits = require "smart-splits"
 
-        -- Resizing splits
-        vim.keymap.set("n", "<A-h>", splits.resize_left)
-        vim.keymap.set("n", "<A-j>", splits.resize_down)
-        vim.keymap.set("n", "<A-k>", splits.resize_up)
-        vim.keymap.set("n", "<A-l>", splits.resize_right)
+        return {
+            -- Resizing splits
+            { "<A-h>", mode = { "n" }, splits.resize_left },
+            { "<A-l>", mode = { "n" }, splits.resize_right },
+            { "<A-j>", mode = { "n" }, splits.resize_down },
+            { "<A-k>", mode = { "n" }, splits.resize_up },
 
-        -- Moving between splits
-        vim.keymap.set("n", "<C-h>", splits.move_cursor_left)
-        vim.keymap.set("n", "<C-j>", splits.move_cursor_down)
-        vim.keymap.set("n", "<C-k>", splits.move_cursor_up)
-        vim.keymap.set("n", "<C-l>", splits.move_cursor_right)
-        vim.keymap.set("n", "<C-\\>", splits.move_cursor_previous)
+            -- Moving between splits
+            { "<C-h>", mode = { "n" }, splits.move_cursor_left },
+            { "<C-l>", mode = { "n" }, splits.move_cursor_right },
+            { "<C-j>", mode = { "n" }, splits.move_cursor_down },
+            { "<C-k>", mode = { "n" }, splits.move_cursor_up },
+            { "<C-\\", mode = { "n" }, splits.move_cursor_previous },
 
-        -- Swapping buffers between windows
-        vim.keymap.set("n", "<leader><leader>h", splits.swap_buf_left)
-        vim.keymap.set("n", "<leader><leader>j", splits.swap_buf_down)
-        vim.keymap.set("n", "<leader><leader>k", splits.swap_buf_up)
-        vim.keymap.set("n", "<leader><leader>l", splits.swap_buf_right)
+            -- Swapping buffers between windows
+            { "<leader><leader>h", mode = { "n" }, splits.swap_buf_left },
+            { "<leader><leader>l", mode = { "n" }, splits.swap_buf_right },
+            { "<leader><leader>j", mode = { "n" }, splits.swap_buf_down },
+            { "<leader><leader>k", mode = { "n" }, splits.swap_buf_up },
+        }
     end,
 }
