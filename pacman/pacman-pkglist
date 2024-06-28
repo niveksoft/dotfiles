@@ -77,6 +77,8 @@ linux-firmware
 linux-headers
 loupe
 lua-language-server
+lua51
+luarocks
 malcontent
 man-db
 marksman
