@@ -124,7 +124,7 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "@a
 ### Extensions ###
 dconf write /org/gnome/shell/disable-user-extensions false
 
-dconf write /org/gnome/shell/enabled-extensions "@as ['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com']"
+dconf write /org/gnome/shell/enabled-extensions "@as ['system-monitor@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'caffeine@patapon.info']"
 
 # Pop Shell
 dconf write /org/gnome/shell/extensions/pop-shell/tile-by-default true
@@ -145,3 +145,6 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/hot-keys false
 dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
 dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
 dconf write /org/gnome/shell/extensions/dash-to-dock/apply-custom-theme true
+
+# Caffeine
+dconf write /org/gnome/shell/extensions/caffeine/restore-state true
