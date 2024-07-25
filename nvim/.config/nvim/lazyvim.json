@@ -1,7 +1,13 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.util.mini-hipatterns",
     "plugins.extras.editor.oil",
-    "plugins.extras.editor.smart-splits"
+    "plugins.extras.editor.smart-splits",
+    "plugins.extras.lang.templ"
   ],
   "news": {
     "NEWS.md": "6077"
