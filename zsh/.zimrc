@@ -1,3 +1,4 @@
+zmodule ssh
 zmodule environment
 zmodule input
 zmodule run-help
