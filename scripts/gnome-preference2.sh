@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 write() {
@@ -91,7 +90,6 @@ write /org/gnome/shell/keybindings/toggle-application-view "@as []"
 write /org/gnome/shell/keybindings/toggle-overview "@as []"
 write /org/gnome/shell/keybindings/toggle-quick-settings "@as []"
 
-
 # Power
 write /org/gnome/settings-daemon/plugins/power/ambient-enabled "false"
 
@@ -122,9 +120,9 @@ write /org/gnome/shell/disabled-extensions "@as []"
 write /org/gnome/shell/enabled-extensions "['blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com', 'just-perfection-desktop@just-perfection', 'space-bar@luchrioh', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']"
 
 # Blur my Shell Extension Settings
-write /org/gnome/shell/extensions/blur-my-shell/overview "false"
-write /org/gnome/shell/extensions/blur-my-shell/panel "false"
-write /org/gnome/shell/extensions/blur-my-shell/dash-to-dock "false"
+write /org/gnome/shell/extensions/blur-my-shell/overview/blur "false"
+write /org/gnome/shell/extensions/blur-my-shell/panel/blur "false"
+write /org/gnome/shell/extensions/blur-my-shell/dash-to-dock/blur "false"
 
 # Dash to Dock Extension Settings
 write /org/gnome/shell/extensions/dash-to-dock/apply-custom-theme "false"
@@ -156,7 +154,7 @@ write /org/gnome/shell/extensions/user-theme/name "'Yaru-blue-dark'"
 
 # Pop Shell Extension Settings
 write /org/gnome/shell/extensions/pop-shell/active-hint "true"
-write /org/gnome/shell/extensions/pop-shell/activate-hint-border-radius "uint32 2"
+write /org/gnome/shell/extensions/pop-shell/active-hint-border-radius "uint32 2"
 write /org/gnome/shell/extensions/pop-shell/activate-launcher "['<Super>d']"
 write /org/gnome/shell/extensions/pop-shell/fullscreen-launcher "true"
 write /org/gnome/shell/extensions/pop-shell/gap-inner "uint32 1"
