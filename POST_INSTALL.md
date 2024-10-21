@@ -156,3 +156,31 @@ gnome-shell-extension-pop-shell-git \
 yay -S --needed --noconfirm banana-cursor-bin \
 yaru
 ```
+
+## Nautilus
+
+[Guide](https://github.com/Stunkymonkey/nautilus-open-any-terminal)
+
+```sh
+yay -S --needed --noconfirm nautilus-open-any-terminal
+```
+
+## SSH
+
+Configure sshd to only accept authentication key login.
+
+Add authorized users public key to `authorized_keys`.
+
+```sh
+# enable ssh server in machine
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
+# allow ssh
+sudo firewall-cmd --zone=home --add-service=ssh --permanent
+sudo firewald-cmd --reload
+
+# avahi for local discovery
+sudo systemctl enable avahi-daemon
+sudo systemctl start avahi-daemon
+```
