@@ -5,7 +5,16 @@ Setup steps for a new installation of archlinux with archinstall gnome desktop.
 ## Missing packages
 
 ```sh
-sudo pacman -S --needed zsh git less stow neovim wezterm starship 
+sudo pacman -S --needed \
+git \
+github-cli \
+less \
+neovim \
+starship \
+stow \
+tmux \
+wezterm \
+zsh
 ```
 
 ## Yay
@@ -20,6 +29,8 @@ yay -Y --devel --save
 ```
 
 ## Zshell
+
+Install [zim](https://zimfw.sh/#install)
 
 ```sh
 chsh -s "$(which zsh)" && \
