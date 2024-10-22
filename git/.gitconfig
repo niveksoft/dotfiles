@@ -5,3 +5,8 @@
 [user]
 	name = nikevsoft
 	email = 2e96po4bt@mozmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

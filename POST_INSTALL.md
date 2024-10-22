@@ -184,3 +184,41 @@ sudo firewald-cmd --reload
 sudo systemctl enable avahi-daemon
 sudo systemctl start avahi-daemon
 ```
+
+## Utilities
+
+```sh
+yay -S --needed --noconfirm \
+lazydocker \
+lazygit \
+ripgrep
+```
+
+## TTS
+
+```sh
+yay -S --needed --noconfirm \
+piper-tts-bin \
+piper-voices-en-us
+```
+
+Copy `piper/piper-generic.conf` in `/etc/speech-dispatcher/modules`.
+
+Update `/etc/speech-dispatcher/speechd.conf` to set below.
+
+```sh
+# set voice
+DefaultVoiceType "MALE1"
+
+# set language
+DefaultLanguage "en"
+
+# set audio output method
+AudioOutputMethod "pulse"
+
+# add module
+AddModule "piper-generic" "sd_generic" "piper-generic.conf"
+
+# set default module
+DefaultModule piper-generic
+```
