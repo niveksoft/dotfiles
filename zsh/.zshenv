@@ -7,6 +7,4 @@ export DOTFILES="$HOME/Development/dotfiles"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
-export TERM="xterm-256color"
-
 export BROWSER="firefox"
