@@ -185,11 +185,21 @@ sudo systemctl enable avahi-daemon
 sudo systemctl start avahi-daemon
 ```
 
+## Docker
+
+```sh
+sudo pacman -S --needed --noconfirm docker
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+sudo usermod -aG docker $USER
+
+yay -S --needed --noconfirm lazydocker
+```
+
 ## Utilities
 
 ```sh
 yay -S --needed --noconfirm \
-lazydocker \
 lazygit \
 ripgrep
 ```
