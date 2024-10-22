@@ -28,6 +28,14 @@ yay -Y --gendb && \
 yay -Y --devel --save
 ```
 
+## Better rm
+
+```sh
+yay -S --needed --noconfirm \
+safe-rm \
+trash-cli-git
+```
+
 ## Zshell
 
 Install [zim](https://zimfw.sh/#install)
