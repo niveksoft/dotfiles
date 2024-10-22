@@ -28,6 +28,39 @@ yay -Y --gendb && \
 yay -Y --devel --save
 ```
 
+## Timeshift
+
+Recover from partial upgrades. 
+
+Open and setup for BTFRS.
+
+```sh
+yay -S --neeeded timeshift timeshift-autosnap
+sudo systemctl enable cronie.service
+sudo systemctl start cronie.service
+```
+
+## Grub BTRFS
+
+[Guide](https://discovery.endeavouros.com/encrypted-installation/btrfs-with-timeshift-snapshots-on-the-grub-menu/2022/02/)
+
+```sh
+sudo pacman -S --needed grub-btrfs inotify-tools
+sudo systemctl enable grub-btrfsd
+sudo systemctl start grub-btrfsd
+```
+
+Manually create snapshots.
+
+```sh
+# generate entry
+sudo /etc/grub.d/41_snapshots-btrfs
+
+# regenerate config
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
 ## Better rm
 
 ```sh
