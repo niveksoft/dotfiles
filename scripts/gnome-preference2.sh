@@ -54,6 +54,7 @@ write /org/gnome/desktop/wm/keybindings/begin-move "@as []"
 write /org/gnome/desktop/wm/keybindings/begin-resize "@as []"
 write /org/gnome/desktop/wm/keybindings/close "['<Super>q']"
 write /org/gnome/desktop/wm/keybindings/maximize "@as []"
+write /org/gnome/desktop/wm/keybindings/minimize "@as []"
 write /org/gnome/desktop/wm/keybindings/move-to-workspace-1 "['<Shift><Super>1']"
 write /org/gnome/desktop/wm/keybindings/move-to-workspace-2 "['<Shift><Super>2']"
 write /org/gnome/desktop/wm/keybindings/move-to-workspace-3 "['<Shift><Super>3']"
@@ -98,7 +99,7 @@ write /org/gnome/settings-daemon/plugins/media-keys/logout "@as []"
 write /org/gnome/settings-daemon/plugins/media-keys/screensaver "@as []"
 
 # Terminal Application
-write /org/gnome/applications/terminal/exec "'wezterm'"
+write /org/gnome/applications/terminal/exec "'ghostty'"
 write /org/gnome/applications/terminal/exec-arg "''"
 
 # Custom Keybindings
@@ -110,8 +111,8 @@ write /org/gnome/settings-daemon/plugins/media-keys/screenreader "@as []"
 write /org/gnome/settings-daemon/plugins/media-keys/www "['<Super>b']"
 
 write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Super>t'"
-write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'wezterm'"
-write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Wezterm'"
+write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'ghostty'"
+write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Ghostty'"
 write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "@as ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 
 # Shell Extensions
@@ -149,18 +150,19 @@ write /org/gnome/shell/extensions/space-bar/shortcuts/enable-move-to-workspace-s
 # Just Perfection Extension Settings
 write /org/gnome/shell/extensions/just-perfection/theme "true"
 write /org/gnome/shell/extensions/just-perfection/workspace-popup "false"
+write /org/gnome/shell/extensions/just-perfection/startup-status "0"
 
 # User Theme Extension Settings
 write /org/gnome/shell/extensions/user-theme/name "'Yaru-blue-dark'"
 
 # Pop Shell Extension Settings
-write /org/gnome/shell/extensions/pop-shell/active-hint "true"
+write /org/gnome/shell/extensions/pop-shell/active-hint "false"
 write /org/gnome/shell/extensions/pop-shell/active-hint-border-radius "uint32 2"
 write /org/gnome/shell/extensions/pop-shell/activate-launcher "['<Super>d']"
 write /org/gnome/shell/extensions/pop-shell/fullscreen-launcher "true"
 write /org/gnome/shell/extensions/pop-shell/gap-inner "uint32 2"
 write /org/gnome/shell/extensions/pop-shell/gap-outer "uint32 2"
-write /org/gnome/shell/extensions/pop-shell/hint-color-rgba "'rgb(89, 172, 209)'"
+write /org/gnome/shell/extensions/pop-shell/hint-color-rgba "'rgb(64, 61, 82)'"
 write /org/gnome/shell/extensions/pop-shell/pop-monitor-down "@as []"
 write /org/gnome/shell/extensions/pop-shell/pop-monitor-left "@as []"
 write /org/gnome/shell/extensions/pop-shell/pop-monitor-right "@as []"
@@ -170,6 +172,3 @@ write /org/gnome/shell/extensions/pop-shell/pop-workspace-up "@as []"
 write /org/gnome/shell/extensions/pop-shell/show-title "true"
 write /org/gnome/shell/extensions/pop-shell/tile-by-default "true"
 write /org/gnome/shell/extensions/pop-shell/tile-enter "['<Super>e']"
-
-# Additional Window Manager Keybindings
-write /org/gnome/desktop/wm/keybindings/minimize "@as []"
