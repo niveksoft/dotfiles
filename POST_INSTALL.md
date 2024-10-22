@@ -160,9 +160,14 @@ gnome-shell-extension-pop-shell-git \
 
 ## Themes
 
+Use `gdm-settings` to apply theme to the login screen.
+
 ```sh
-yay -S --needed --noconfirm banana-cursor-bin \
-yaru
+yay -S --needed --noconfirm \
+gdm-settings \
+banana-cursor-bin \
+yaru-gnome-shell-theme \
+rose-pine-gtk-theme-full
 ```
 
 ## Nautilus

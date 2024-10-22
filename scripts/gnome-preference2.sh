@@ -11,8 +11,8 @@ write /org/gnome/desktop/interface/clock-format "'12h'"
 write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
 write /org/gnome/desktop/interface/cursor-theme "'Banana'"
 write /org/gnome/desktop/interface/enable-hot-corners "false"
-write /org/gnome/desktop/interface/gtk-theme "'Yaru-blue-dark'"
-write /org/gnome/desktop/interface/icon-theme "'Yaru-blue-dark'"
+write /org/gnome/desktop/interface/gtk-theme "'rose-pine-gtk'"
+write /org/gnome/desktop/interface/icon-theme "'rose-pine-icons'"
 write /org/gnome/desktop/interface/show-battery-percentage "true"
 
 # Session
@@ -153,7 +153,7 @@ write /org/gnome/shell/extensions/just-perfection/workspace-popup "false"
 write /org/gnome/shell/extensions/just-perfection/startup-status "0"
 
 # User Theme Extension Settings
-write /org/gnome/shell/extensions/user-theme/name "'Yaru-blue-dark'"
+write /org/gnome/shell/extensions/user-theme/name "'Yaru-purple-dark'"
 
 # Pop Shell Extension Settings
 write /org/gnome/shell/extensions/pop-shell/active-hint "false"
