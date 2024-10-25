@@ -16,20 +16,24 @@ return {
     opts = function()
         return {
             options = {
+                theme = "auto",
                 component_separators = "",
                 section_separators = "",
                 ignore_focus = {},
                 always_divide_middle = true,
                 globalstatus = true,
-                disabled_filetypes = { statusline = { "dashboard", "alpha" } },
+                disabled_filetypes = { statusline = { "dashboard", "alpha", "oil" } },
             },
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch", "diagnostics" },
-                lualine_c = { "%=", "filename", "harpoon2", mark_status },
-                lualine_x = {
-                    "filetype",
+                lualine_c = {
+                    "%=",
+                    { "filetype", icon_only = true, padding = { left = 0, right = 0 } },
+                    { "filename", padding = { left = 0, right = 0 } },
+                    mark_status,
                 },
+                lualine_x = {},
                 lualine_y = {
                     "progress",
                 },
@@ -46,7 +50,7 @@ return {
                 lualine_z = {},
             },
 
-            extensions = { "lazy", "toggleterm", "mason", "oil", "trouble" },
+            extensions = { "lazy", "toggleterm", "mason", "trouble" },
         }
     end,
 }
