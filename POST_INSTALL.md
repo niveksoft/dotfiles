@@ -14,7 +14,9 @@ starship \
 stow \
 tmux \
 wezterm \
-zsh
+zsh \
+ripgrep \
+fd
 ```
 
 ## Yay
