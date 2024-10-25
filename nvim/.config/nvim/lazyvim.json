@@ -1,16 +1,16 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.coding.mini-comment",
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.coding.yanky",
-    "lazyvim.plugins.extras.lang.go",
-    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "plugins.extras.editor.oil",
-    "plugins.extras.editor.smart-splits",
-    "plugins.extras.lang.templ"
+    "plugins.extras.editor.smart-splits"
   ],
   "news": {
-    "NEWS.md": "6077"
+    "NEWS.md": "6520"
   },
   "version": 6
 }
