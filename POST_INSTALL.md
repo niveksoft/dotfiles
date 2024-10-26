@@ -30,6 +30,10 @@ yay -Y --gendb && \
 yay -Y --devel --save
 ```
 
+## Chaotic AUR
+
+[Guide](https://aur.chaotic.cx/docs)
+
 ## Timeshift
 
 Recover from partial upgrades. 
