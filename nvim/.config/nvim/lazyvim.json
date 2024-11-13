@@ -5,12 +5,16 @@
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.editor.harpoon2",
     "lazyvim.plugins.extras.editor.inc-rename",
+    "lazyvim.plugins.extras.lang.docker",
+    "lazyvim.plugins.extras.lang.elixir",
+    "lazyvim.plugins.extras.lang.erlang",
+    "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "plugins.extras.editor.oil",
     "plugins.extras.editor.smart-splits"
   ],
   "news": {
-    "NEWS.md": "6520"
+    "NEWS.md": "7107"
   },
-  "version": 6
+  "version": 7
 }
