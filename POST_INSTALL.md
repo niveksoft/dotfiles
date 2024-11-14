@@ -284,3 +284,20 @@ AddModule "piper-generic" "sd_generic" "piper-generic.conf"
 # set default module
 DefaultModule piper-generic
 ```
+
+### XDG Terminal
+
+[Guide](https://unix.stackexchange.com/questions/707469/error-with-gtk-launch-unable-to-find-terminal-required-for-application)
+
+Currently setup to use `ghostty`
+
+```sh
+stow --target="$HOME" xdg
+
+yay -S --needed xdg-terminal-exec-mkhl
+
+# or
+
+yay -S --needed xdg-terminal-exec-git
+```
+
