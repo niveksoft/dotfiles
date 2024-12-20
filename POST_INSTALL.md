@@ -209,6 +209,12 @@ yaru-gnome-shell-theme \
 rose-pine-gtk-theme-full
 ```
 
+Setup input sources in gdm screen.
+
+```sh
+sudo localectl set-x11-keymap us,us pc104 dvorak, grp:win_space_toggle
+```
+
 ## Nautilus
 
 [Guide](https://github.com/Stunkymonkey/nautilus-open-any-terminal)
