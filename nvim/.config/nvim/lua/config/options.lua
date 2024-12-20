@@ -10,3 +10,5 @@
 -- See `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+vim.opt.conceallevel = 0
