@@ -82,6 +82,9 @@ write /org/gnome/desktop/wm/keybindings/toggle-fullscreen "@as []"
 write /org/gnome/desktop/wm/keybindings/toggle-maximized "@as []"
 write /org/gnome/desktop/wm/keybindings/unmaximize "@as []"
 
+# Cursor
+write /org/gnome/desktop/interface/cursor-size "40"
+
 # Mutter Wayland Keybindings
 write /org/gnome/mutter/wayland/keybindings/restore-shortcuts "@as []"
 
