@@ -3,8 +3,8 @@
 [core]
 	editor = nvim
 [user]
-	name = nikevsoft
-	email = 2e96po4bt@mozmail.com
+	name = Kevin Ruiz
+	email = niveksoft@proton.me
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
