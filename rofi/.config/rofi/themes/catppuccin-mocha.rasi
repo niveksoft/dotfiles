@@ -1,0 +1,139 @@
+/* Main configuration variables */
+* {
+    /* Color scheme - Catppuccin Mocha */
+    bg-col: #1e1e2e;           /* Background color */
+    bg-col-light: #1e1e2e;     /* Light background for contrast elements */
+    border-col: #89b4fa;       /* Border color, bluish */
+    selected-col: #1e1e2e;     /* Background color for selected items */
+    blue: #89b4fa;             /* Accent color */
+    fg-col: #cdd6f4;           /* Main text color */
+    fg-col2: #f38ba8;          /* Secondary text color (pinkish) */
+    grey: #6c7086;             /* For less prominent text */
+
+    /* Sizing - using percentages for screen scaling */
+    width: 20%;                /* Width as percentage of screen */
+    font: "MonoLisa Regular 13";
+}
+
+/* For all text and icon elements, inherit colors from parent */
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+/* Main window container */
+window {
+    height: 15%;               /* Height as percentage of screen */
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    border-radius: 12px;       /* Rounded corners */
+}
+
+/* Container for all content */
+mainbox {
+    background-color: @bg-col;
+    border-radius: 10px;
+}
+
+/* Search input area */
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+/* The text before the input field */
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 0px;
+    margin: 20px 0px 0px 20px;
+}
+
+/* The colon separator between prompt and entry (hidden) */
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+/* The actual text input field */
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+    border-radius: 8px;
+}
+
+/* The list of items/applications */
+listview {
+    text: 16px;
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 1;                /* Single column layout */
+    lines: 8;                  /* Show 8 items at once */
+    background-color: @bg-col;
+}
+
+/* Each individual item in the list */
+element {
+    padding: 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border-radius: 6px;
+}
+
+/* Application icons */
+element-icon {
+    size: 28px;
+}
+
+/* Styling for the currently selected item */
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col2;
+    border-radius: 6px;
+}
+
+/* Container for the mode switcher buttons */
+mode-switcher {
+    spacing: 0;
+}
+
+/* Individual mode switcher buttons */
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+    border-radius: 8px;
+}
+
+/* Selected mode button */
+button selected {
+    background-color: @bg-col;
+    text-color: @blue;
+    border-radius: 8px;
+}
+
+/* Container for messages */
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+/* Text display boxes */
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+    border-radius: 8px;
+}

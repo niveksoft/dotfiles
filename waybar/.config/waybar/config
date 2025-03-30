@@ -1,0 +1,92 @@
+{
+  "layer": "top",
+  "height": 40,
+  "spacing": 5,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "network",
+    "wireplumber",
+    "backlight",
+    "battery"
+  ],
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "format": "{:%I:%M}"
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "󰕾"
+      ]
+    },
+    "tooltip-format": "{volume}% volume",
+    "on-click": "pactl set-sink-mute alsa_output.pci-0000_c1_00.6.analog-stereo toggle"
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": ""
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": " {}%",
+    "interval": 1,
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
+  },
+  "battery": {
+    "states": {
+      "warning": 20
+    },
+    "format": "{icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "format-charging": "󰂄",
+    "format-warning": "󰂃",
+    "tooltip-format": "{capacity}% capacity"
+  }
+}
