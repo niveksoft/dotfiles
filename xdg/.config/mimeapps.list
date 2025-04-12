@@ -1,13 +1,15 @@
 [Default Applications]
-application/pdf=zen-alpha.desktop
-application/x-extension-htm=zen-alpha.desktop
-application/x-extension-html=zen-alpha.desktop
-application/x-extension-shtml=zen-alpha.desktop
-application/x-extension-xht=zen-alpha.desktop
-application/x-extension-xhtml=zen-alpha.desktop
-application/xhtml+xml=zen-alpha.desktop
-text/html=zen-alpha.desktop
-text/plain=nvim.desktop
-x-scheme-handler/chrome=zen-alpha.desktop
-x-scheme-handler/http=zen-alpha.desktop
-x-scheme-handler/https=zen-alpha.desktop
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/x-extension-xht=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/xhtml+xml=zen.desktop
+text/html=zen.desktop
+x-scheme-handler/chrome=zen.desktop
+x-scheme-handler/http=zen.desktop
+x-scheme-handler/https=zen.desktop
+
+[Added Associations]
+text/plain=nvim.desktop;
+text/html=nvim.desktop;
