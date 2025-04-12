@@ -6,7 +6,6 @@ zmodule magic-enter
 zmodule termtitle
 zmodule utility
 zmodule fzf
-zmodule asdf
 zmodule archive
 zmodule zsh-users/zsh-completions --fpath src
 zmodule ziglang/shell-completions --fpath .
@@ -17,4 +16,4 @@ zmodule zsh-users/zsh-history-substring-search
 zmodule joke/zim-starship
 zmodule joke/zim-github-cli
 zmodule jeffreytse/zsh-vi-mode
-zmodule nikevsoft/tmux-sessionizer
+zmodule niveksoft/tmux-sessionizer
