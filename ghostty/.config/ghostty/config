@@ -2,9 +2,8 @@ font-family = MonoLisa Variable
 font-feature = -liga
 font-size = 12
 
-theme = rose-pine
+theme = Builtin Light
 
 background-opacity = 1
 
 window-decoration = true
-
