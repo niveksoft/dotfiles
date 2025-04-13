@@ -16,7 +16,7 @@ cd -
 Open easyeffects and select the preset to use.
 
 ```sh
-sudo pacman -S --noconfirm easyeffects
+sudo pacman -S --needed easyeffects
 
 # https://github.com/cab404/framework-dsp
 TMP=$(mktemp -d) && \
@@ -32,14 +32,16 @@ rm -rf "$TMP"
 ## Power management
 
 ```sh
-sudo pacman -S --noconfirm power-profiles-daemon && \
-sudo systemctl enable power-profiles-daemon.service
+sudo pacman -S power-profiles-daemon
+sudo systemctl enable power-profiles-daemon
 ```
 
 ## Wi-Fi
 
 ```sh
-sudo pacman -S --noconfirm wireless-regdb iwd
+sudo pacman -S --needed wireless-regdb iwd
+
+sudo systemctl enable --now iwd
 
 # set domain
 sudo sed -i 's/^#WIRELESS_REGDOM="US"/WIRELESS_REGDOM="US"/' /etc/conf.d/wireless-regdom
