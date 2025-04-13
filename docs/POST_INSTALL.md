@@ -1,87 +1,28 @@
 # Post Install Setup
 
-Setup steps for a new installation of archlinux with archinstall gnome desktop.
+## Paru
+
+```sh
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -sic
+```
 
 ## Missing packages
 
 ```sh
-sudo pacman -S --needed \
-git \
-github-cli \
-less \
-neovim \
-starship \
-stow \
-tmux \
-wezterm \
-zsh \
-ripgrep \
-fd
-```
-
-## Yay
-
-```sh
-sudo pacman -S --needed git base-devel && \
-git clone https://aur.archlinux.org/yay-bin.git && \
-cd yay-bin && \
-makepkg -si && \
-yay -Y --gendb && \
-yay -Y --devel --save
+sudo pacman -S --needed fzf ghostty git less man neovim starship stow tmux zsh
 ```
 
 ## Chaotic AUR
 
 [Guide](https://aur.chaotic.cx/docs)
 
-## Timeshift
-
-Recover from partial upgrades. 
-
-Open and setup for BTFRS.
-
-```sh
-yay -S --neeeded timeshift timeshift-autosnap
-sudo systemctl enable cronie.service
-sudo systemctl start cronie.service
-```
-
-## Grub BTRFS
-
-[Guide](https://discovery.endeavouros.com/encrypted-installation/btrfs-with-timeshift-snapshots-on-the-grub-menu/2022/02/)
-
-```sh
-sudo pacman -S --needed grub-btrfs inotify-tools
-sudo systemctl enable grub-btrfsd
-sudo systemctl start grub-btrfsd
-```
-
-Manually create snapshots.
-
-```sh
-# generate entry
-sudo /etc/grub.d/41_snapshots-btrfs
-
-# regenerate config
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-
 ## Better rm
 
 ```sh
-yay -S --needed --noconfirm \
-safe-rm \
-trash-cli-git
-```
-
-## Zshell
-
-Install [zim](https://zimfw.sh/#install)
-
-```sh
-chsh -s "$(which zsh)" && \
-yay -S zsh-zim-git
+paru -S --needed safe-rm trash-cli
 ```
 
 ## Fonts
@@ -93,15 +34,15 @@ sudo pacman -S --needed noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-font
 ## Clipboard
 
 ```sh
-sudo pacman -S --needed wl-clipboard && \
-wl-paste --primary --watch wl-copy
+sudo pacman -S --needed wl-clipboard mailcap xdg-utils
+# wl-paste --primary --watch wl-copy
 ```
 
 ## Firewall
 
 ```sh
-sudo pacman -S --needed firewalld && \
-sudo systemctl enable --now firewalld.service
+sudo pacman -S --needed firewalld
+sudo systemctl enable --now firewalld
 ```
 
 ## Encryption
@@ -117,8 +58,7 @@ sudo cryptsetup luksChangeKey /dev/nvme0n1p2 --iter-time 1000
 Bluetooth is not enabled by default.
 
 ```sh
-sudo systemctl enable bluetooth && \
-sudo systemctl start bluetooth
+sudo systemctl enable --now bluetooth
 ```
 
 ## Reflector
@@ -152,8 +92,7 @@ sudo tee /etc/xdg/reflector/reflector.conf > /dev/null << EOF
 --sort rate
 EOF
 
-sudo systemctl enable reflector.timer && \
-sudo systemctl start reflector.timer
+sudo systemctl enable --now reflector.timer
 ```
 
 ## Printer
@@ -161,9 +100,10 @@ sudo systemctl start reflector.timer
 [Guide](https://discovery.endeavouros.com/network/printers/2021/03/#network-printer)
 
 ```sh
-sudo pacman -Syu cups cups-pdf
-sudo systemctl enable --now cups.service && \
-sudo systemctl enable --now cups.socket && \
+sudo pacman -Sy cups cups-pdf
+
+# avahi for local discovery
+sudo systemctl enable --now avahi-daemon
 ```
 
 Edit `/etc/nsswitch.conf` and add `mdns_minimal [NOTFOUND=return]` before `resolve`
@@ -189,12 +129,7 @@ sudo pacman -Runs gnome-console epiphany gnome-text-editor
 ## Gnome Extensions
 
 ```sh
-yay -S --needed --noconfirm gnome-shell-extension-blur-my-shell \
-gnome-shell-extension-dash-to-dock \
-gnome-shell-extension-dash-to-dock \
-gnome-shell-extension-just-perfection-desktop \
-gnome-shell-extension-space-bar-git \
-gnome-shell-extension-pop-shell-git \
+paru -S --needed gnome-shell-extension-just-perfection-desktop gnome-shell-extension-space-bar-git gnome-shell-extension-pop-shell-git
 ```
 
 ## Themes
@@ -202,11 +137,7 @@ gnome-shell-extension-pop-shell-git \
 Use `gdm-settings` to apply theme to the login screen.
 
 ```sh
-yay -S --needed --noconfirm \
-gdm-settings \
-banana-cursor-bin \
-yaru-gnome-shell-theme \
-rose-pine-gtk-theme-full
+paru -S --needed gdm-settings banana-cursor-bin
 ```
 
 Setup input sources in gdm screen.
@@ -220,7 +151,7 @@ sudo localectl set-x11-keymap us,us pc104 dvorak, grp:win_space_toggle
 [Guide](https://github.com/Stunkymonkey/nautilus-open-any-terminal)
 
 ```sh
-yay -S --needed --noconfirm nautilus-open-any-terminal
+paru -S --needed nautilus-open-any-terminal
 ```
 
 ## SSH
@@ -231,35 +162,25 @@ Add authorized users public key to `authorized_keys`.
 
 ```sh
 # enable ssh server in machine
-sudo systemctl enable sshd
-sudo systemctl start sshd
+sudo systemctl enable --now sshd
 
 # allow ssh
 sudo firewall-cmd --zone=home --add-service=ssh --permanent
-sudo firewald-cmd --reload
+sudo firewall-cmd --reload
 
 # avahi for local discovery
-sudo systemctl enable avahi-daemon
-sudo systemctl start avahi-daemon
+sudo systemctl enable --now avahi-daemon
 ```
 
 ## Docker
 
 ```sh
-sudo pacman -S --needed --noconfirm docker
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
+sudo pacman -S --needed docker
+sudo systemctl enable --now docker
+sudo systemctl enable --now containerd
 sudo usermod -aG docker $USER
 
-yay -S --needed --noconfirm lazydocker
-```
-
-## Utilities
-
-```sh
-yay -S --needed --noconfirm \
-lazygit \
-ripgrep
+paru -S --needed lazydocker
 ```
 
 ## TTS
@@ -298,12 +219,7 @@ DefaultModule piper-generic
 Currently setup to use `ghostty`
 
 ```sh
+paru -S --needed xdg-terminal-exec
 stow --target="$HOME" xdg
-
-yay -S --needed xdg-terminal-exec-mkhl
-
-# or
-
-yay -S --needed xdg-terminal-exec-git
 ```
 
