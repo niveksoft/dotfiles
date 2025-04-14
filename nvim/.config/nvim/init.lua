@@ -44,6 +44,23 @@ vim.cmd("filetype plugin indent on")
 
 -- Autocommands
 
+-- Auto-command group for toggling cursorline in Insert mode
+local CursorLineGroup = vim.api.nvim_create_augroup("CursorLineToggleGroup", { clear = true })
+-- Disable cursorline on entering Insert mode
+vim.api.nvim_create_autocmd("InsertEnter", {
+  group = CursorLineGroup,
+  pattern = "*",
+  callback = function() vim.wo.cursorline = false end,
+  desc = "Disable cursorline in Insert mode"
+})
+-- Enable cursorline on leaving Insert mode
+vim.api.nvim_create_autocmd("InsertLeave", {
+  group = CursorLineGroup,
+  pattern = "*",
+  callback = function() vim.wo.cursorline = true end,
+  desc = "Enable cursorline when leaving Insert mode"
+})
+
 -- Auto-command group for auto-reloading init.lua
 local AutoReloadGroup = vim.api.nvim_create_augroup("AutoReloadConfigGroup", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
@@ -100,6 +117,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight on yank",
 })
 
+-- Lazy
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  print("Installing lazy.nvim...")
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath) -- Add lazy.nvim to runtime path
+
 -- Terminal mode mappings
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { noremap = true, silent = true, desc = "Exit terminal mode" })
 vim.keymap.set('t', '<A-t>', '<C-\\><C-n><C-^>', { noremap = true, silent = true, desc = "Switch to alternate file" })
@@ -121,9 +153,53 @@ vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true, silent = tr
 -- Window management mappings
 vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true, desc = "Split vertically" })
 vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true, desc = "Split horizontally" })
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = "Move to left window" })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = "Move to lower window" })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = "Move to upper window" })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = "Move to right window" })
 
-vim.cmd [[colorscheme default]]
+require("lazy").setup({
+    {
+        'mrjones2014/smart-splits.nvim',
+        config = function()
+            require('smart-splits').setup({})
+
+            local function safe_require(mod)
+                local ok, M = pcall(require, mod)
+                if ok then return M end
+                return nil
+            end
+
+            local smart_splits = safe_require('smart-splits')
+
+            if smart_splits then
+                -- Resize
+                vim.keymap.set('n', '<A-h>', smart_splits.resize_left, { noremap = true, silent = true, desc = "Resize left" })
+                vim.keymap.set('n', '<A-j>', smart_splits.resize_down, { noremap = true, silent = true, desc = "Resize down" })
+                vim.keymap.set('n', '<A-k>', smart_splits.resize_up, { noremap = true, silent = true, desc = "Resize up" })
+                vim.keymap.set('n', '<A-l>', smart_splits.resize_right, { noremap = true, silent = true, desc = "Resize right" })
+
+                -- Moving between splits
+                vim.keymap.set('n', '<C-h>', smart_splits.move_cursor_left, { noremap = true, silent = true, desc = "Move to left window" })
+                vim.keymap.set('n', '<C-j>', smart_splits.move_cursor_down, { noremap = true, silent = true, desc = "Move to lower window" })
+                vim.keymap.set('n', '<C-k>', smart_splits.move_cursor_up, { noremap = true, silent = true, desc = "Move to upper window" })
+                vim.keymap.set('n', '<C-l>', smart_splits.move_cursor_right, { noremap = true, silent = true, desc = "Move to right window" })
+
+                -- Swapping buffers between windows
+                vim.keymap.set('n', '<leader><leader>h', smart_splits.swap_buf_left, { noremap = true, silent = true, desc = "Swap to left window" })
+                vim.keymap.set('n', '<leader><leader>j', smart_splits.swap_buf_down, { noremap = true, silent = true, desc = "Swap to lower window" })
+                vim.keymap.set('n', '<leader><leader>k', smart_splits.swap_buf_up, { noremap = true, silent = true, desc = "Swap to upper window" })
+                vim.keymap.set('n', '<leader><leader>l', smart_splits.swap_buf_right, { noremap = true, silent = true, desc = "Swap to right window" })
+            else
+                vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = "Move to left window" })
+                vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = "Move to lower window" })
+                vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = "Move to upper window" })
+                vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = "Move to right window" })
+            end
+        end
+    },
+})
+
+local ok, theme_module = pcall(require, 'custom.theme')
+if ok and theme_module and theme_module.apply then
+    theme_module.apply()
+else
+    print("Error loading custom theme from lua/custom/theme.lua. Using default.")
+    vim.cmd [[colorscheme default]]
+end
