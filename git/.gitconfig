@@ -1,12 +1,32 @@
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [core]
-	editor = nvim
+    editor = nvim
+    # Use Neovim as the pager for commands like 'git log', 'git diff'
+    # -R: Read-only mode
+    # -n: No swap file, use memory only
+    # -: Read from standard input
+    pager = nvim -R -n -
+
+[color]
+    # Disable color codes specifically when output is sent to the pager
+    # This prevents issues with ANSI codes in the nvim pager
+    pager = false
+
 [user]
-	name = Kevin Ruiz
-	email = niveksoft@proton.me
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    name = Kevin Ruiz
+    email = niveksoft@proton.me
+
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
+
+[merge]
+    tool = nvimdiff
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w | wincmd J'
+    trustExitCode = true
