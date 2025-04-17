@@ -150,6 +150,13 @@ vim.keymap.set('n', '<leader>tn', ':tabnext<CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<leader>tp', ':tabprevious<CR>', { noremap = true, silent = true, desc = "Previous tab" })
 vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close tab" })
 
+-- Buffer management mappings
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true, desc = "Close buffer"})
+-- :w save current buffer, %bd delete all buffers, e# open last edited file, bd# close unnamed buffer, '" keep cursor position
+vim.keymap.set('n', '<leader>bo', ':w|:%bd|e#|bd#<CR>|\'\"', { noremap = true, silent = true, desc = "Close other buffers"})
+vim.keymap.set('n', 'H', ':bprevious<CR>', { noremap = true, silent = true, desc = "Previous tab" })
+vim.keymap.set('n', 'L', ':bnext<CR>', { noremap = true, silent = true, desc = "Next tab" })
+
 -- Window management mappings
 vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { noremap = true, silent = true, desc = "Split vertically" })
 vim.keymap.set('n', '<leader>sh', ':split<CR>', { noremap = true, silent = true, desc = "Split horizontally" })
