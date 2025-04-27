@@ -11,4 +11,4 @@ export BROWSER="zen-browser"
 
 export MANPAGER="nvim +Man!"
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border=rounded --color=fg:#282a36,bg:#f8f8f8,hl:#3465a4,fg+:#282a36,bg+:#dcdcdc,hl+:#3465a4,info:#4e9a06,prompt:#3465a4,pointer:#cc0000,marker:#cc0000,spinner:#06989a,header:#06989a,border:#686868,query:#282a36,gutter:#f8f8f8'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border=rounded --color=fg:#4c4f69,bg:#eff1f5,hl:#8839ef,fg+:#4c4f69,bg+:#ccd0da,hl+:#ea76cb,info:#209fb5,prompt:#1e66f5,pointer:#dc8a78,marker:#dc8a78,spinner:#7287fd,header:#7287fd,border:#bcc0cc,query:#4c4f69,gutter:#eff1f5'
