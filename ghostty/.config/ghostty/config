@@ -2,7 +2,7 @@ font-family = Maple Mono
 font-feature = -calt, -liga, -dlig
 font-size = 12
 
-theme = Builtin Light
+theme = catppuccin-latte
 
 background-opacity = 1
 
