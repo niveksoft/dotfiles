@@ -3,6 +3,6 @@ local function disable(package)
 end
 
 return {
-    disable "catppuccin/nvim",
-    disable "rcarriga/nvim-notify",
+    disable "folke/tokyonight.nvim",
+    -- disable "rcarriga/nvim-notify",
 }
