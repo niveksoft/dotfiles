@@ -103,7 +103,7 @@ local function ToggleNetrw()
         -- This makes the initial size relative to the terminal width.
         -- vim.g.netrw_winsize = 30
         -- Open Netrw in a vertical split
-        vim.cmd('Vex')
+        vim.cmd('Ex')
     end
 end
 
