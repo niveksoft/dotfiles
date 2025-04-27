@@ -6,6 +6,7 @@ zmodule magic-enter
 zmodule termtitle
 zmodule utility
 zmodule fzf
+zmodule asdf
 zmodule archive
 zmodule zsh-users/zsh-completions --fpath src
 zmodule ziglang/shell-completions --fpath .
