@@ -9,7 +9,7 @@
 -- See `:help 'list'`
 -- See `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "▸ ", trail = "·", nbsp = "␣", extends = "»", precedes = "«" }
 
 vim.opt.conceallevel = 0
 vim.opt.wrap = true

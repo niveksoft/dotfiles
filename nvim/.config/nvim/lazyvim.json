@@ -8,10 +8,13 @@
     "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.editor.snacks_explorer",
     "lazyvim.plugins.extras.editor.snacks_picker",
+    "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns",
-    "plugins.extras.editor.smart-splits"
+    "plugins.extras.editor.inline-diagnostic",
+    "plugins.extras.editor.smart-splits",
+    "plugins.extras.lang.html"
   ],
   "install_version": 7,
   "news": {
