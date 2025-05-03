@@ -15,6 +15,20 @@ makepkg -sic
 sudo pacman -S --needed fzf ghostty git less man neovim starship stow tmux zsh
 ```
 
+## Plymouth
+
+```sh
+paru -S --needed plymouth plymouth-theme-arch-os
+
+sudo tee /etc/plymouth/plymouthd.conf > /dev/null << EOF
+[Daemon]
+Theme=arch-os
+ShowDelay=0
+EOF
+
+sudo mkinitpcio -P
+```
+
 ## Chaotic AUR
 
 [Guide](https://aur.chaotic.cx/docs)
