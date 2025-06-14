@@ -1,0 +1,124 @@
+* {
+  border: none;
+  border-radius: 0; /* Or a small value like 4px if you prefer rounded corners */
+  font-family:
+    "Maple Mono", "Noto Sans", sans-serif; /* Choose your preferred font */
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #ffffff; /* bg */
+  color: #000000; /* fg */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-bottom: 1px solid #bbbbbb; /* grey1 for a subtle separator */
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+/* Workspaces */
+#workspaces {
+  margin: 0 4px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #555555; /* grey2 for inactive workspaces */
+  background-color: transparent;
+  border-radius: 3px; /* Optional rounding for buttons */
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.1); /* Slight hover effect */
+}
+
+#workspaces button.focused {
+  color: #000000; /* fg */
+  background-color: #b5d5ff; /* accent1 */
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: #ffffff; /* white */
+  background-color: #bb0000; /* red */
+}
+
+/* Modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+  padding: 0 10px;
+  margin: 0 2px;
+  color: #000000; /* fg */
+}
+
+#tray {
+  background-color: #ffffff; /* bg */
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #bb0000; /* red */
+}
+
+#pulseaudio {
+  color: #000000; /* fg */
+}
+
+#pulseaudio.muted {
+  color: #bb0000; /* red */
+}
+
+#network.disconnected {
+  color: #bb0000; /* red */
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #00bb00; /* green */
+}
+
+#battery.critical:not(.charging) {
+  color: #ffffff; /* white */
+  background-color: #bb0000; /* red */
+}
+
+/* Example for a custom module */
+#custom-power {
+  color: #ffffff;
+  background-color: #bb0000; /* red */
+  padding: 0 10px;
+  margin: 0 4px;
+  border-radius: 3px;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: #f0f0f0; /* Slightly off-white for tooltip background */
+  color: #000000; /* fg */
+  border-radius: 4px;
+  border: 1px solid #bbbbbb; /* grey1 */
+}
+
+tooltip label {
+  padding: 5px;
+  color: #000000; /* fg */
+}

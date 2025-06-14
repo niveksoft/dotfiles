@@ -1,0 +1,129 @@
+"ui.background" = { bg = "#ffffff" }
+"ui.text" = "#000000"
+"ui.text.focus" = "#000000"
+"ui.text.inactive" = "#555555"
+"ui.text.info" = "#000000"
+
+"ui.cursor" = { fg = "#ffffff", bg = "#000000" }
+"ui.cursor.primary" = { fg = "#ffffff", bg = "#000000" }
+"ui.cursor.match" = { fg = "#000000", bg = "#ffff55" }
+
+"ui.selection" = { bg = "#b5d5ff" }
+"ui.selection.primary" = { bg = "#b5d5ff" }
+
+"ui.linenr" = "#555555"
+"ui.linenr.selected" = "#000000"
+
+"ui.statusline" = { fg = "#000000", bg = "#bbbbbb" }
+"ui.statusline.inactive" = { fg = "#555555", bg = "#bbbbbb" }
+"ui.statusline.normal" = { fg = "#000000", bg = "#55ff55" }
+"ui.statusline.insert" = { fg = "#000000", bg = "#5555ff" }
+"ui.statusline.select" = { fg = "#000000", bg = "#ff55ff" }
+
+"ui.popup" = { fg = "#000000", bg = "#bbbbbb" }
+"ui.window" = { fg = "#555555" }
+"ui.help" = { fg = "#000000", bg = "#bbbbbb" }
+
+"ui.menu" = { fg = "#000000", bg = "#bbbbbb" }
+"ui.menu.selected" = { fg = "#ffffff", bg = "#0000bb" }
+"ui.menu.scroll" = { fg = "#555555", bg = "#bbbbbb" }
+
+"ui.virtual" = "#555555"
+"ui.virtual.ruler" = { bg = "#bbbbbb" }
+"ui.virtual.whitespace" = "#555555"
+"ui.virtual.indent-guide" = "#bbbbbb"
+
+"error" = "#bb0000"
+"warning" = "#bbbb00"
+"info" = "#0000bb"
+"hint" = "#00bbbb"
+
+"diagnostic.error" = { underline = { color = "#bb0000", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "#bbbb00", style = "curl" } }
+"diagnostic.info" = { underline = { color = "#0000bb", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "#00bbbb", style = "curl" } }
+
+# Syntax highlighting
+"type" = "#0000bb"
+"type.builtin" = "#0000bb"
+"type.parameter" = "#0000bb"
+"type.enum" = "#0000bb"
+"type.enum.variant" = "#0000bb"
+
+"constructor" = "#bb00bb"
+"constructor.builtin" = "#bb00bb"
+
+"constant" = "#bb00bb"
+"constant.builtin" = "#bb00bb"
+"constant.builtin.boolean" = "#bb00bb"
+"constant.character" = "#bb00bb"
+"constant.character.escape" = "#00bbbb"
+"constant.numeric" = "#bb00bb"
+
+"string" = "#00bb00"
+"string.regexp" = "#00bbbb"
+"string.special" = "#00bbbb"
+
+"comment" = "#555555"
+"comment.line" = "#555555"
+"comment.block" = "#555555"
+
+"variable" = "#000000"
+"variable.builtin" = "#bb00bb"
+"variable.parameter" = "#000000"
+"variable.other.member" = "#000000"
+
+"label" = "#bbbb00"
+
+"punctuation" = "#000000"
+"punctuation.delimiter" = "#000000"
+"punctuation.bracket" = "#000000"
+
+"keyword" = "#bb0000"
+"keyword.control" = "#bb0000"
+"keyword.control.conditional" = "#bb0000"
+"keyword.control.repeat" = "#bb0000"
+"keyword.control.import" = "#bb0000"
+"keyword.control.return" = "#bb0000"
+"keyword.control.exception" = "#bb0000"
+"keyword.operator" = "#bb0000"
+"keyword.directive" = "#bb0000"
+"keyword.function" = "#bb0000"
+"keyword.storage" = "#bb0000"
+"keyword.storage.type" = "#bb0000"
+"keyword.storage.modifier" = "#bb0000"
+
+"operator" = "#000000"
+
+"function" = "#0000bb"
+"function.builtin" = "#0000bb"
+"function.method" = "#0000bb"
+"function.macro" = "#bb00bb"
+"function.special" = "#bb00bb"
+
+"tag" = "#bb0000"
+"attribute" = "#bbbb00"
+
+"namespace" = "#bb00bb"
+
+"special" = "#bb00bb"
+
+"markup.heading.marker" = "#bb0000"
+"markup.heading.1" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "#bb0000", modifiers = ["bold"] }
+"markup.list" = "#bb0000"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "#0000bb", underline = { style = "line" } }
+"markup.link.text" = "#bb00bb"
+"markup.quote" = "#00bb00"
+"markup.raw" = "#00bbbb"
+
+"diff.plus" = "#00bb00"
+"diff.delta" = "#bbbb00"
+"diff.minus" = "#bb0000"

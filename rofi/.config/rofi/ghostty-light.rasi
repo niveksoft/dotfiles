@@ -1,0 +1,170 @@
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  icon-theme: "Papirus-Light"; /* Or your preferred light icon theme */
+  font: "JetBrainsMono Nerd Font 11";
+  display-drun: " Apps";
+  display-run: " Run";
+  display-window: " Windows";
+  drun-display-format: "{name}";
+  run-display-format: "{name}";
+  window-format: "{w} · {c} · {t}";
+}
+
+* {
+  bg: #ffffff; /* Main background */
+  fg: #000000; /* Main foreground */
+  accent: #b5d5ff; /* Primary accent */
+  accent-fg: #000000; /* Foreground for accented elements */
+
+  grey-light: #bbbbbb; /* Light grey for borders/separators */
+  grey-dark: #555555; /* Dark grey for less prominent text */
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  background-color: @bg;
+  border: 1px;
+  border-color: @grey-light;
+  border-radius: 6px;
+  width: 500px; /* Adjust width as needed */
+  padding: 10px;
+}
+
+mainbox {
+  border: 0;
+  padding: 5px;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+  text-color: @fg;
+  expand: false;
+  border: 0 0 1px 0;
+  border-color: @grey-light;
+  border-radius: 0;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+prompt {
+  enabled: true;
+  padding: 0 8px 0 0;
+  background-color: inherit;
+  text-color: inherit;
+}
+
+entry {
+  background-color: inherit;
+  text-color: inherit;
+  placeholder-color: @grey-dark;
+  placeholder: "Search...";
+  expand: true;
+  padding: 0;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  spacing: 5px;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+  scrollbar: false; /* Set to true if you want a scrollbar */
+  padding: 5px 0 0 0;
+  border: 0;
+}
+
+element {
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
+  orientation: horizontal;
+}
+
+element-icon {
+  size: 1.5em;
+  padding: 0 10px 0 0;
+  vertical-align: 0.5;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element.normal.normal {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element.normal.urgent {
+  background-color: #bb0000; /* red */
+  text-color: #ffffff; /* white */
+}
+
+element.normal.active {
+  background-color: @accent;
+  text-color: @accent-fg;
+}
+
+element.selected.normal {
+  background-color: @accent;
+  text-color: @accent-fg;
+  border: 0 0 0 2px; /* Optional: left border for selection */
+  border-color: #0000bb; /* accent2 */
+}
+
+element.selected.urgent {
+  background-color: #bb0000; /* red */
+  text-color: #ffffff; /* white */
+}
+
+element.selected.active {
+  background-color: @accent;
+  text-color: @accent-fg;
+}
+
+element.alternate.normal {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element.alternate.urgent {
+  background-color: #bb0000; /* red */
+  text-color: #ffffff; /* white */
+}
+
+element.alternate.active {
+  background-color: @accent;
+  text-color: @accent-fg;
+}
+
+/* Optional scrollbar styling if enabled */
+/*
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 4px;
+    padding: 0;
+    handle-color: @grey-light;
+    background-color: transparent;
+}
+*/
+
+message {
+  border: 1px;
+  border-color: @grey-light;
+  padding: 5px;
+  background-color: @bg;
+}
+
+textbox {
+  text-color: @fg;
+  background-color: @bg;
+}
