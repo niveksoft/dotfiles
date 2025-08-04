@@ -1,14 +1,12 @@
 return {
     {
-        "catppuccin/nvim",
-        opts = {
-            no_italic = true,
-        },
+        "neanias/everforest-nvim",
     },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "catppuccin-latte",
+            colorscheme = "everforest",
+            background = "soft",
         },
     },
 }

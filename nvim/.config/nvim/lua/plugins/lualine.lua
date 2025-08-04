@@ -14,9 +14,18 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
+        local custom_everforest = require "lualine.themes.everforest"
+        -- match terminal everforest background
+        custom_everforest.command.c.bg = "#2d353c"
+        custom_everforest.insert.c.bg = "#2d353c"
+        custom_everforest.normal.c.bg = "#2d353c"
+        custom_everforest.replace.c.bg = "#2d353c"
+        custom_everforest.terminal.c.bg = "#2d353c"
+        custom_everforest.visual.c.bg = "#2d353c"
+
         return {
             options = {
-                theme = "auto",
+                theme = custom_everforest,
                 component_separators = "",
                 section_separators = "",
                 ignore_focus = {},
