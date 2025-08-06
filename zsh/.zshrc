@@ -23,3 +23,9 @@ function zvm_after_init() {
 }
 
 source ${ZIM_HOME}/init.zsh
+
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -Sope"
+
+open() {
+  xdg-open "$@" >/dev/null 2>&1 &
+}

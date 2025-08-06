@@ -1,3 +1,4 @@
+zmodule joke/zim-mise
 zmodule ssh
 zmodule environment
 zmodule input
