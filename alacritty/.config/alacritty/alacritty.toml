@@ -13,11 +13,8 @@ size = 9
 padding.x = 14
 padding.y = 14
 decorations = "None"
-opacity = 0.98
 
 [keyboard]
-bindings = [ { key = "F11", action = "ToggleFullscreen" } ]
-
-[cursor]
-style = { shape = "Beam", blinking = "On" }
-thickness = 0.2
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
+]
